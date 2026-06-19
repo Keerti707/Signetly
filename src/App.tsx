@@ -7,6 +7,7 @@ import DashboardPage from "./pages/DashboardPage";
 import UploadPage from "./pages/UploadPage";
 import DocumentPage from "./pages/DocumentPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import SignDocumentPage from "./pages/SignDocumentPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/document/:id" element={<DocumentPage />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/sign/:token" element={<SignDocumentPage />} />
       </Routes>
     </BrowserRouter>
   );
