@@ -61,7 +61,7 @@ function DashboardPage() {
             <div className="mx-auto max-w-6xl">
                 <nav className="flex items-center justify-between">
                     <Link to="/" className="heading-font text-3xl font-bold text-violet-600">
-                        ✍️ InkFlow
+                       Signetly✨
                     </Link>
 
                     <button

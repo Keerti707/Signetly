@@ -5,7 +5,7 @@ function LandingPage() {
     <main className="min-h-screen overflow-hidden bg-[#F7F4FF] text-slate-900">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Link to="/" className="heading-font text-3xl font-bold text-violet-600">
-          🌈 BloomSign
+          Signetly✨
         </Link>
 
         <div className="hidden items-center gap-8 font-semibold text-slate-600 md:flex">
@@ -42,7 +42,7 @@ function LandingPage() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            BloomSign helps teams upload documents, place signatures, share secure links,
+            Signetly✨ helps teams upload documents, place signatures, share secure links,
             and track every action with clean audit trails.
           </p>
 

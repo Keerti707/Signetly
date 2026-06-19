@@ -29,7 +29,7 @@ function RegisterPage() {
         className="w-full max-w-md rounded-[2rem] bg-white p-8 shadow-2xl shadow-violet-100"
       >
         <Link to="/" className="heading-font text-3xl font-bold text-violet-600">
-          ✍️ InkFlow
+          Signetly✨
         </Link>
 
         <h1 className="heading-font mt-8 text-4xl font-bold text-slate-900">
