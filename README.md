@@ -1,99 +1,108 @@
 # ✨ Signetly
 
-A full-stack collaborative e-signature platform inspired by DocuSign and Adobe Sign. Signetly enables users to upload PDF documents, place signatures, invite external signers, share secure signing links, track signing progress, and generate signed PDFs with audit trails.
+A full-stack collaborative e-signature platform inspired by DocuSign and Adobe Sign.
 
-🌐 Live Demo: https://signetly.vercel.app
+Signetly enables users to upload PDF documents, place digital signatures, invite external signers, share secure signing links, track document progress, maintain audit trails, and generate signed PDFs.
 
----
-
-## 🚀 Overview
-
-Signetly digitizes document signing workflows by eliminating physical paperwork and providing a secure, traceable signing experience.
-
-The platform supports:
-
-* Secure user authentication
-* PDF document uploads
-* Signature placement and management
-* External signer invitations
-* Public signing links
-* Audit logging
-* Status tracking
-* Signed PDF generation
+🌐 **Live Frontend Demo:** https://signetly.vercel.app
 
 ---
 
-## ✨ Key Features
+# 🚀 Features
 
-### 🔐 Authentication & Security
+## 🔐 Authentication & Security
 
-* JWT-based authentication
-* Secure password hashing
-* Protected API routes
-* Document ownership validation
+* User Registration
+* User Login
+* JWT Authentication
+* Protected Routes
+* Secure Password Hashing
+* Document Ownership Validation
 
-### 📄 Document Management
+---
 
-* Upload PDF documents
-* View uploaded documents
-* Delete documents
-* Dashboard-based document tracking
+## 📄 Document Management
 
-### ✍️ Signature Workflows
+* Upload PDF Documents
+* View Uploaded Documents
+* Dashboard-Based Document Tracking
+* Delete Documents
+* Document Status Management
 
-* Typed signatures
-* Drawn signatures
-* Drag-and-drop placement
-* Signature repositioning
-* Signature deletion
-* Signature persistence
+---
 
-### 👥 Collaborative Signing
+## ✍️ Signature Workflows
 
-* Invite external signers
-* Generate secure signing links
-* Public signing workflow
-* Signer status tracking
+* Typed Signatures
+* Drawn Signatures
+* Drag-and-Drop Signature Placement
+* Signature Position Persistence
+* Signature Editing
+* Signature Deletion
 
-### 📊 Status Lifecycle
+---
 
-Document Status:
+## 👥 Collaborative Signing
+
+* Invite External Signers
+* Generate Tokenized Signing Links
+* Public Signing Workflow
+* Signer Status Tracking
+* Rejection Workflow
+* Rejection Reason Tracking
+
+---
+
+## 📜 Audit Logging
+
+Every important action is recorded:
+
+* Document Uploads
+* Signer Invitations
+* Signature Placement
+* Signature Updates
+* Signature Deletion
+* Document Signing
+* Document Rejection
+* Timestamp Tracking
+* IP Address Tracking
+
+---
+
+## 📊 Status Lifecycle
+
+### Document Status
 
 * Pending
 * Partially Signed
 * Signed
+* Rejected
 
-Signer Status:
+### Signer Status
 
 * Pending
 * Signed
 
-### 📜 Audit Trails
+---
 
-Every important action is logged:
+## 📥 PDF Generation
 
-* Document uploads
-* Signer invitations
-* Signature placement
-* Signature updates
-* Signature deletion
-* Document signing events
+The application uses PDF-Lib to:
 
-### 📥 PDF Generation
-
-* Embed signatures into PDFs
-* Generate downloadable signed documents
-* Server-side PDF processing using PDF-Lib
+* Embed Signatures
+* Generate Signed PDFs
+* Preserve Original Documents
+* Export Downloadable Signed Versions
 
 ---
 
-## 🏗️ System Architecture
+# 🏗️ System Architecture
 
 Frontend (React + TypeScript)
 
 ↓
 
-REST API (Express.js)
+REST API (Node.js + Express)
 
 ↓
 
@@ -109,19 +118,19 @@ Signed PDF Generation
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 
 * React
 * TypeScript
 * Vite
-* React Router
 * Tailwind CSS
+* React Router
 * Axios
 * React Hot Toast
 
-### Backend
+## Backend
 
 * Node.js
 * Express.js
@@ -129,154 +138,138 @@ Signed PDF Generation
 * Multer
 * PDF-Lib
 
-### Database
+## Database
 
 * MongoDB
 * Mongoose
 
-### Deployment
+## Deployment
 
 * Frontend: Vercel
-* Backend: Node/Express
+* Backend: Node.js API
 * Database: MongoDB
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
+```text
 document-signature-app
 
 ├── client
-
-│ ├── src
-
-│ ├── pages
-
-│ ├── services
-
-│ └── components
-
-│
+│   ├── src
+│   ├── pages
+│   ├── components
+│   ├── services
+│   └── assets
 
 └── server
-
-├── controllers
-
-├── models
-
-├── routes
-
-├── middleware
-
-└── uploads
-
----
-
-## ⚙️ Local Setup
-
-### Frontend
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-Runs on:
-
-```text
-http://localhost:5173
-```
-
-### Backend
-
-```bash
-cd server
-npm install
-npm run dev
-```
-
-Runs on:
-
-```text
-http://localhost:5000
-```
-
-### MongoDB (Docker)
-
-```bash
-docker run -d \
---name signetly-mongo \
--p 27017:27017 \
-mongo:7
+    ├── controllers
+    ├── routes
+    ├── models
+    ├── middleware
+    └── uploads
 ```
 
 ---
 
-## 🔄 Workflow
+# 🔄 Complete Workflow
 
-### Document Owner
+## Document Owner
 
 1. Register/Login
 2. Upload PDF
-3. Add signatures
-4. Invite signers
-5. Share signing link
-6. Monitor signing progress
-7. Download signed PDF
+3. Add Signature
+4. Invite Signers
+5. Share Signing Link
+6. Track Signing Progress
+7. Download Signed PDF
 
-### Signer
+## Signer
 
-1. Open signing link
-2. Verify invited email
-3. Place signature
-4. Submit document
-
----
-
-## 📸 Screenshots
-
-Add screenshots for:
-
-* Landing Page
-* Dashboard
-* Upload Workflow
-* Document Viewer
-* Signature Placement
-* Shared Signing Page
-* Signed PDF Download
+1. Open Signing Link
+2. Verify Email
+3. Sign Document
+4. Submit Signature
 
 ---
 
-## 🎯 Skills Demonstrated
+# 📸 Screenshots
+
+## Landing Page
+
+![Landing Page](assets/landing-page.png)
+
+---
+
+## Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+---
+
+## Upload Workflow
+
+![Upload Workflow](assets/upload-workflow.png)
+
+---
+
+## Invite Signers
+
+![Invite Signers](assets/invite-signers.png)
+
+---
+
+## Signing Page
+
+![Signing Page](assets/signing-page.png)
+
+---
+
+## Signed PDF Download
+
+![Signed PDF](assets/signed-pdf.png)
+
+---
+
+# 🎥 Demo Video
+
+Add your demo video link here:
+
+```text
+https://your-demo-video-link
+```
+
+---
+
+# 🎯 Skills Demonstrated
 
 * Full-Stack Development
 * SaaS Product Design
+* REST API Development
 * JWT Authentication
-* REST API Design
 * MongoDB Data Modeling
-* File Upload Handling
 * PDF Processing
 * Audit Logging
-* Secure Sharing Workflows
-* Responsive UI Development
+* Secure File Handling
+* Document Lifecycle Management
+* Responsive UI Design
 
 ---
 
-## 🚀 Future Enhancements
+# 🚀 Future Enhancements
 
-* Email delivery integration
-* OTP-based signer verification
-* Multi-page PDF signing
-* Cloud storage support
-* Real-time collaboration
-* Role-based permissions
-* Digital certificate support
+* Email Delivery Integration
+* Cloud Storage (AWS S3)
+* OTP Verification
+* Multi-Page Signing
+* Real-Time Notifications
+* Role-Based Permissions
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
-Keerti Gupta
+**Keerti Gupta**
 
-Built as a portfolio-grade SaaS application demonstrating document lifecycle management, secure signing workflows, audit logging, and PDF processing.
+Built as a portfolio-grade SaaS application demonstrating secure document lifecycle management, digital signatures, audit logging, collaborative workflows, and PDF generation.
