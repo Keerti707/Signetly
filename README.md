@@ -1,131 +1,111 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 # ✨ Signetly
 
-A modern full-stack e-signature platform that enables users to upload PDF documents, place signatures, invite signers, share secure signing links, and track document signing progress in real time.
+A full-stack collaborative e-signature platform inspired by DocuSign and Adobe Sign. Signetly enables users to upload PDF documents, place signatures, invite external signers, share secure signing links, track signing progress, and generate signed PDFs with audit trails.
+
+🌐 Live Demo: https://signetly.vercel.app
 
 ---
 
-## 🚀 Features
+## 🚀 Overview
 
-### 🔐 Authentication
+Signetly digitizes document signing workflows by eliminating physical paperwork and providing a secure, traceable signing experience.
 
-* User registration and login
+The platform supports:
+
+* Secure user authentication
+* PDF document uploads
+* Signature placement and management
+* External signer invitations
+* Public signing links
+* Audit logging
+* Status tracking
+* Signed PDF generation
+
+---
+
+## ✨ Key Features
+
+### 🔐 Authentication & Security
+
 * JWT-based authentication
-* Protected routes
+* Secure password hashing
+* Protected API routes
+* Document ownership validation
 
 ### 📄 Document Management
 
 * Upload PDF documents
 * View uploaded documents
-* Dashboard with document status tracking
 * Delete documents
+* Dashboard-based document tracking
 
-### ✍️ Signature System
+### ✍️ Signature Workflows
 
 * Typed signatures
-* Drawn signatures using canvas
-* Drag-and-drop signature positioning
-* Delete signatures
-* Download signed PDFs
+* Drawn signatures
+* Drag-and-drop placement
+* Signature repositioning
+* Signature deletion
+* Signature persistence
 
 ### 👥 Collaborative Signing
 
-* Invite signers via email
+* Invite external signers
 * Generate secure signing links
-* External signing workflow
-* Track signer status
+* Public signing workflow
+* Signer status tracking
 
-### 📊 Status Tracking
+### 📊 Status Lifecycle
 
-Document lifecycle:
+Document Status:
 
 * Pending
 * Partially Signed
 * Signed
 
-Signer lifecycle:
+Signer Status:
 
 * Pending
 * Signed
 
-### 🔔 User Experience
+### 📜 Audit Trails
 
-* Toast notifications
-* Modern responsive UI
-* Real-time updates
-* Clean dashboard experience
+Every important action is logged:
+
+* Document uploads
+* Signer invitations
+* Signature placement
+* Signature updates
+* Signature deletion
+* Document signing events
+
+### 📥 PDF Generation
+
+* Embed signatures into PDFs
+* Generate downloadable signed documents
+* Server-side PDF processing using PDF-Lib
+
+---
+
+## 🏗️ System Architecture
+
+Frontend (React + TypeScript)
+
+↓
+
+REST API (Express.js)
+
+↓
+
+MongoDB Database
+
+↓
+
+PDF Processing Layer (PDF-Lib)
+
+↓
+
+Signed PDF Generation
 
 ---
 
@@ -147,60 +127,54 @@ Signer lifecycle:
 * Express.js
 * JWT Authentication
 * Multer
+* PDF-Lib
 
 ### Database
 
 * MongoDB
 * Mongoose
 
-### PDF Handling
+### Deployment
 
-* PDF Upload & Storage
-* Signature Placement
-* Signed PDF Download
+* Frontend: Vercel
+* Backend: Node/Express
+* Database: MongoDB
 
 ---
 
 ## 📂 Project Structure
 
-document-signature-app/
+document-signature-app
 
-├── client/
+├── client
 
-│ ├── src/
+│ ├── src
 
-│ ├── pages/
+│ ├── pages
 
-│ ├── services/
+│ ├── services
 
-│ └── components/
+│ └── components
 
 │
 
-└── server/
+└── server
 
-├── controllers/
+├── controllers
 
-├── models/
+├── models
 
-├── routes/
+├── routes
 
-├── middleware/
+├── middleware
 
-└── uploads/
+└── uploads
 
 ---
 
 ## ⚙️ Local Setup
 
-### Clone Repository
-
-```bash
-git clone <your-repository-url>
-cd document-signature-app
-```
-
-### Frontend Setup
+### Frontend
 
 ```bash
 cd client
@@ -208,13 +182,13 @@ npm install
 npm run dev
 ```
 
-Frontend runs on:
+Runs on:
 
 ```text
 http://localhost:5173
 ```
 
-### Backend Setup
+### Backend
 
 ```bash
 cd server
@@ -222,21 +196,19 @@ npm install
 npm run dev
 ```
 
-Backend runs on:
+Runs on:
 
 ```text
 http://localhost:5000
 ```
 
-### MongoDB
-
-Run MongoDB locally or using Docker:
+### MongoDB (Docker)
 
 ```bash
 docker run -d \
-  --name signetly-mongo \
-  -p 27017:27017 \
-  mongo:7
+--name signetly-mongo \
+-p 27017:27017 \
+mongo:7
 ```
 
 ---
@@ -250,41 +222,56 @@ docker run -d \
 3. Add signatures
 4. Invite signers
 5. Share signing link
-6. Track signing progress
+6. Monitor signing progress
 7. Download signed PDF
 
 ### Signer
 
 1. Open signing link
-2. Enter invited email
+2. Verify invited email
 3. Place signature
-4. Submit signature
+4. Submit document
 
 ---
 
 ## 📸 Screenshots
 
-Add screenshots of:
+Add screenshots for:
 
 * Landing Page
 * Dashboard
-* Upload Page
+* Upload Workflow
 * Document Viewer
 * Signature Placement
 * Shared Signing Page
+* Signed PDF Download
 
 ---
 
-## 🎯 Future Improvements
+## 🎯 Skills Demonstrated
+
+* Full-Stack Development
+* SaaS Product Design
+* JWT Authentication
+* REST API Design
+* MongoDB Data Modeling
+* File Upload Handling
+* PDF Processing
+* Audit Logging
+* Secure Sharing Workflows
+* Responsive UI Development
+
+---
+
+## 🚀 Future Enhancements
 
 * Email delivery integration
-* OTP verification
+* OTP-based signer verification
 * Multi-page PDF signing
-* Digital certificate support
-* Signature history timeline
+* Cloud storage support
 * Real-time collaboration
-* Cloud storage integration
 * Role-based permissions
+* Digital certificate support
 
 ---
 
@@ -292,4 +279,4 @@ Add screenshots of:
 
 Keerti Gupta
 
-Built as a full-stack collaborative document signing platform using React, TypeScript, Express, MongoDB, and modern web technologies.
+Built as a portfolio-grade SaaS application demonstrating document lifecycle management, secure signing workflows, audit logging, and PDF processing.
