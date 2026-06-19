@@ -42,8 +42,8 @@ function LandingPage() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            Signetly✨ helps teams upload documents, place signatures, share secure links,
-            and track every action with clean audit trails.
+            A modern e-signature platform for securely uploading documents, collecting signatures,
+            sharing signing links, and tracking document workflows with complete audit visibility.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
