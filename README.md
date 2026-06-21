@@ -1,59 +1,54 @@
 # ✨ Signetly
 
-A full-stack collaborative e-signature platform inspired by DocuSign and Adobe Sign.
+A modern full-stack e-signature platform that enables users to upload PDF documents, invite signers, collect signatures, track document progress, maintain audit trails, and generate downloadable signed PDFs.
 
-Signetly enables users to upload PDF documents, place digital signatures, invite external signers, share secure signing links, track document progress, maintain audit trails, and generate signed PDFs.
+### 🌐 Live Demo
 
-🌐 **Live Frontend Demo:** https://signetly.vercel.app
+**Frontend:** https://signetly.vercel.app
+
+### 🎥 Demo Video
+
+https://drive.google.com/file/d/1_etSmZYtuEhXMvWOdqZMzhgWJrSZKWnP/view?usp=drivesdk
 
 ---
 
-# 🚀 Features
+## 🚀 Features
 
-## 🔐 Authentication & Security
+### 🔐 Authentication & Security
 
-* User Registration
-* User Login
+* User Registration & Login
 * JWT Authentication
 * Protected Routes
 * Secure Password Hashing
 * Document Ownership Validation
 
----
-
-## 📄 Document Management
+### 📄 Document Management
 
 * Upload PDF Documents
-* View Uploaded Documents
 * Dashboard-Based Document Tracking
+* View Uploaded Documents
 * Delete Documents
-* Document Status Management
+* Track Document Status
 
----
-
-## ✍️ Signature Workflows
+### ✍️ Digital Signatures
 
 * Typed Signatures
 * Drawn Signatures
 * Drag-and-Drop Signature Placement
 * Signature Position Persistence
-* Signature Editing
-* Signature Deletion
+* Edit Existing Signatures
+* Delete Signatures
 
----
-
-## 👥 Collaborative Signing
+### 👥 Collaborative Signing
 
 * Invite External Signers
-* Generate Tokenized Signing Links
+* Secure Tokenized Signing Links
 * Public Signing Workflow
 * Signer Status Tracking
-* Rejection Workflow
+* Document Rejection Workflow
 * Rejection Reason Tracking
 
----
-
-## 📜 Audit Logging
+### 📜 Audit Logging
 
 Every important action is recorded:
 
@@ -67,27 +62,23 @@ Every important action is recorded:
 * Timestamp Tracking
 * IP Address Tracking
 
----
+### 📊 Status Lifecycle
 
-## 📊 Status Lifecycle
-
-### Document Status
+#### Document Status
 
 * Pending
 * Partially Signed
 * Signed
 * Rejected
 
-### Signer Status
+#### Signer Status
 
 * Pending
 * Signed
 
----
+### 📥 PDF Generation
 
-## 📥 PDF Generation
-
-The application uses PDF-Lib to:
+Powered by PDF-Lib:
 
 * Embed Signatures
 * Generate Signed PDFs
@@ -96,31 +87,33 @@ The application uses PDF-Lib to:
 
 ---
 
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 
+```text
 Frontend (React + TypeScript)
 
-↓
+        ↓
 
 REST API (Node.js + Express)
 
-↓
+        ↓
 
-MongoDB Database
+MongoDB Atlas
 
-↓
+        ↓
 
 PDF Processing Layer (PDF-Lib)
 
-↓
+        ↓
 
 Signed PDF Generation
+```
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-## Frontend
+### Frontend
 
 * React
 * TypeScript
@@ -130,7 +123,7 @@ Signed PDF Generation
 * Axios
 * React Hot Toast
 
-## Backend
+### Backend
 
 * Node.js
 * Express.js
@@ -138,20 +131,20 @@ Signed PDF Generation
 * Multer
 * PDF-Lib
 
-## Database
+### Database
 
-* MongoDB
+* MongoDB Atlas
 * Mongoose
 
-## Deployment
+### Deployment
 
 * Frontend: Vercel
-* Backend: Node.js API
-* Database: MongoDB
+* Backend: Railway
+* Database: MongoDB Atlas
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 document-signature-app
@@ -161,7 +154,8 @@ document-signature-app
 │   ├── pages
 │   ├── components
 │   ├── services
-│   └── assets
+│   ├── assets
+│   └── screenshots
 
 └── server
     ├── controllers
@@ -173,9 +167,9 @@ document-signature-app
 
 ---
 
-# 🔄 Complete Workflow
+## 🔄 Complete Workflow
 
-## Document Owner
+### Document Owner
 
 1. Register/Login
 2. Upload PDF
@@ -185,7 +179,7 @@ document-signature-app
 6. Track Signing Progress
 7. Download Signed PDF
 
-## Signer
+### Signer
 
 1. Open Signing Link
 2. Verify Email
@@ -194,55 +188,35 @@ document-signature-app
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-## Landing Page
+### Landing Page
 
-![Landing Page](assets/landing-page.png)
+![Landing Page](./screenshots/landing-page.png)
 
----
+### Dashboard
 
-## Dashboard
+![Dashboard](./screenshots/dashboard.png)
 
-![Dashboard](assets/dashboard.png)
+### Upload Document
 
----
+![Upload Document](./screenshots/upload-page.png)
 
-## Upload Workflow
+### Document Management
 
-![Upload Workflow](assets/upload-workflow.png)
+![Document Management](./screenshots/document-page.png)
 
----
+### Shared Signing Page
 
-## Invite Signers
+![Shared Signing](./screenshots/signing-page.png)
 
-![Invite Signers](assets/invite-signers.png)
+### Signed PDF Output
 
----
-
-## Signing Page
-
-![Signing Page](assets/signing-page.png)
+![Signed PDF](./screenshots/signed-pdf.png)
 
 ---
 
-## Signed PDF Download
-
-![Signed PDF](assets/signed-pdf.png)
-
----
-
-# 🎥 Demo Video
-
-Add your demo video link here:
-
-```text
-https://your-demo-video-link
-```
-
----
-
-# 🎯 Skills Demonstrated
+## 🎯 Skills Demonstrated
 
 * Full-Stack Development
 * SaaS Product Design
@@ -254,10 +228,11 @@ https://your-demo-video-link
 * Secure File Handling
 * Document Lifecycle Management
 * Responsive UI Design
+* Cloud Deployment
 
 ---
 
-# 🚀 Future Enhancements
+## 🚀 Future Enhancements
 
 * Email Delivery Integration
 * Cloud Storage (AWS S3)
@@ -265,10 +240,12 @@ https://your-demo-video-link
 * Multi-Page Signing
 * Real-Time Notifications
 * Role-Based Permissions
+* Signature Certificates
+* Team Workspaces
 
 ---
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
 **Keerti Gupta**
 
